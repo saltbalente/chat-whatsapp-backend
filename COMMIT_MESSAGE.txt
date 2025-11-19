@@ -1,0 +1,40 @@
+🎉 Initial Release: WhatsApp Monitor API v1.0
+
+✨ Características principales:
+- ✅ API REST completa con 10+ endpoints
+- ✅ Scraping de WhatsApp Web usando Selenium + Python
+- ✅ Extracción exitosa de "última vez" de contactos
+- ✅ Base de datos SQLite con historial completo
+- ✅ Monitoreo automático programable
+- ✅ Dashboard web responsive
+- ✅ Cliente Swift incluido para iOS
+- ✅ Listo para producción en Render.com
+
+📦 Archivos incluidos:
+- server.js - Servidor Express principal
+- database.js - Gestión de SQLite
+- monitor.js - Servicio de monitoreo cron
+- whatsapp_scraper.py - Scraper Python/Selenium
+- whatsapp-selenium-client.js - Bridge Node.js <-> Python
+- WhatsAppMonitorAPI.swift - Cliente iOS completo
+- public/ - Dashboard web (HTML/CSS/JS)
+
+📚 Documentación:
+- README.md - Documentación principal
+- QUICKSTART.md - Guía rápida de inicio
+- API_DOCUMENTATION.md - Referencia completa de API
+- DEPLOY_RENDER.md - Guía de despliegue
+- LICENSE - MIT License
+
+🚀 Despliegue:
+- render-build.sh - Script de build para Render
+- requirements.txt - Dependencias Python
+- package.json - Dependencias Node.js
+- .env.example - Variables de entorno
+
+✅ Probado y funcionando:
+- Extracción correcta de "última vez"
+- hasPrivacy detection funcional
+- Cola de procesamiento sin conflictos
+- Monitoreo automático cada 5 minutos
+- Dashboard en tiempo real

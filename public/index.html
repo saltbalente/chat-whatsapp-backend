@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Monitor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 WhatsApp Monitor</h1>
+            <div class="status-bar">
+                <div class="status-item">
+                    <span class="label">WhatsApp:</span>
+                    <span id="whatsapp-status" class="status">Connecting...</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">Monitoring:</span>
+                    <span id="monitor-status" class="status">Starting...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- QR Code Section -->
+        <div id="qr-section" class="card" style="display: none;">
+            <h2>🔐 WhatsApp Authentication</h2>
+            <p>Scan this QR code with WhatsApp on your phone:</p>
+            <div class="qr-container">
+                <img id="qr-code" src="" alt="QR Code">
+            </div>
+            <p class="help-text">Open WhatsApp → Settings → Linked Devices → Link a Device</p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="total-accounts">0</div>
+                <div class="stat-label">Total Accounts</div>
+            </div>
+            <div class="stat-card online">
+                <div class="stat-number" id="online-accounts">0</div>
+                <div class="stat-label">🟢 Online Now</div>
+            </div>
+            <div class="stat-card recent">
+                <div class="stat-number" id="recent-accounts">0</div>
+                <div class="stat-label">🟡 Recently Active</div>
+            </div>
+            <div class="stat-card inactive">
+                <div class="stat-number" id="inactive-accounts">0</div>
+                <div class="stat-label">🔴 Inactive</div>
+            </div>
+        </div>
+
+        <!-- Accounts List -->
+        <div class="card">
+            <div class="card-header">
+                <h2>👥 Monitored Accounts</h2>
+                <button id="refresh-btn" class="btn btn-primary">🔄 Refresh</button>
+            </div>
+            
+            <div id="accounts-list" class="accounts-list">
+                <div class="loading">Loading accounts...</div>
+            </div>
+        </div>
+
+        <!-- Add Account Form -->
+        <div class="card">
+            <h2>➕ Add New Account</h2>
+            <form id="add-account-form" class="form">
+                <div class="form-group">
+                    <label for="account-number">WhatsApp Number</label>
+                    <input 
+                        type="text" 
+                        id="account-number" 
+                        placeholder="573001234567" 
+                        required
+                    >
+                    <small>Include country code, no + or spaces</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="account-name">Account Name</label>
+                    <input 
+                        type="text" 
+                        id="account-name" 
+                        placeholder="María - Asesora Principal" 
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="check-interval">Check Interval (minutes)</label>
+                    <input 
+                        type="number" 
+                        id="check-interval" 
+                        value="30" 
+                        min="5" 
+                        max="120"
+                    >
+                </div>
+                
+                <button type="submit" class="btn btn-success">Add Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

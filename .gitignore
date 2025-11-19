@@ -1,0 +1,37 @@
+# Dependencias
+node_modules/
+__pycache__/
+*.pyc
+
+# Variables de entorno
+.env
+
+# Base de datos
+*.db
+*.db-shm
+*.db-wal
+
+# Sesiones de WhatsApp
+whatsapp-session/
+whatsapp-session-selenium/
+!whatsapp-session-selenium/.gitkeep
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Logs
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Backups
+*.old
+*.backup
+
+# Archivos obsoletos
+whatsapp-client.js
+whatsapp-client-selenium.js
+whatsapp-selenium-client-old.js
+README.old.md
+
